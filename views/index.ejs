@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아재입맛 테스트</title>
+    <link rel="stylesheet" href="/css/set.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div id="container">
+        <div class="center_bg"></div>
+        <div class="center">
+            <div class="test_title">
+                <h1><span style="color:rgb(6, 143, 255)">아재</span>입맛 테스트</h1>
+                <p>친구들과 함께 재미로 한 번 해보세요!</p>
+                <p>개발자가 열심히 만든 아재입맛 테스트를 소개합니다.</p>
+                <p>아재입맛인지 아닌지 확인 한번 해보세요!</p>
+                <p>본 테스트는 총 34개의 선택지로 구성되어 있습니다</p>
+                <p>시작하시려면 아래의 <span style="color:rgb(6, 143, 255)">시작하기</span> 버튼을 클릭해주세요.</p>
+            </div>
+            <div class="test_start">
+                <a href="/form">시작하기</a>
+                <a class="notest" href="#">전 아재아닌데요?</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const notest = document.querySelector(".notest");
+
+    notest.addEventListener("click",()=>{
+        alert("이럴수가");
+        alert("5초뒤에 네이버로 보내드릴께용!");
+        setTimeout(() => {
+            window.location.href = "https://www.naver.com";
+        }, 5000); 
+    })
+</script>
+</html>

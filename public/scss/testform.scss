@@ -1,0 +1,129 @@
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    .center_bg{
+        border-radius: 5px;
+        position: absolute;
+        background: url("/img/goro.png") no-repeat;
+        background-size: cover;
+        width: 800px;
+        height: 700px;
+        filter: blur(3px);
+        
+    }
+    .form_center{
+        position: absolute;
+        width: 600px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.7);
+        border-radius: 100px 0 100px 0;
+       .testform1{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            h1{
+                font-size: 30px;
+                color:#fff;
+                margin: 20px 0;
+                font-family: 'ONE-Mobile-POP';
+                    @font-face {
+                    font-family: 'ONE-Mobile-POP';
+                    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+                    font-weight: normal;
+                    font-style: normal;
+                    }
+            }
+            
+            .form{
+                width: 100%;
+                .form_box{
+                    width: 100%;
+                    display: none;
+                    justify-content: center;
+                    > div {
+                        width:48%;
+                        margin: 0 20px;
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+                        flex-wrap: wrap;
+                        img{
+                            width: 100%;
+                            border-radius: 10px;
+                        }
+                        p{
+                            left: 10px;
+                            padding:5px;
+                            top:0;
+                            position: absolute;
+                            margin: 10px 0;
+                            background-color: #fff;
+                            color:#000;
+                            font-size: 20px;
+                            font-family: 'ONE-Mobile-Regular';
+                            @font-face {
+                                font-family: 'ONE-Mobile-Regular';
+                                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+                                font-weight: normal;
+                                font-style: normal;
+                            }
+                        }
+                        input[type="checkbox"]{
+                            display: none;
+                        }
+                        input[type="checkbox"] + label {
+                            margin-top: 15px;
+                            display: inline-block; 
+                            width:30px;
+                            height: 30px;
+                            line-height: 30px;
+                            text-align: center;
+                            color:#000;
+                            background: #fff;
+                            cursor: pointer; 
+                            border-radius: 3px;
+                        }
+                        input[type="checkbox"]:checked + label{
+                            background-color: rgb(6, 143, 255);
+                            color:#fff;
+                        }
+                    }
+                }
+                .last_box{
+                    display: none;
+                }
+                button{
+                    margin-top: 20px;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border: none;
+                    width: 60px;
+                    height: 30px;
+                    background-color: #fff;
+                    color:#000;
+                    font-family: 'ONE-Mobile-Regular';
+                    transition: all 0.3s;
+                    @font-face {
+                        font-family: 'ONE-Mobile-Regular';
+                        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Regular.woff') format('woff');
+                        font-weight: normal;
+                        font-style: normal;
+                    }   
+                    &:hover{
+                        background-color: rgb(6, 143, 255);
+                        color:#fff;
+                    }
+                }
+            }
+       }
+    }
+}

@@ -1,0 +1,45 @@
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/testform.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="center_bg"></div>
+        <div class="form_center">
+            <div class="testform1">
+                <h1 class="title">좋아하는 음식에 <span style="color:rgb(6, 143, 255)">체크</span>해주세요</h1>
+                <form class="form" id="test_form" action="/formdb" method="post">
+                    <% for (var i = 0; i < foodData.length; i+=2) { %>
+                        <div class="form_box">
+                            <div class="left_form">
+                                <img src="<%- foodData[i].img %>">
+                                <p><%- foodData[i].title %></p>
+                                <input name="foods" type="checkbox" id="food<%- i+1 %>" class="chk" value="food<%- i+1 %>">
+                                <label for="food<%- i+1 %>"><span>✔</span></label>
+                            </div>
+                            <div class="right_form">
+                                <img src="<%- foodData[i+1].img %>">
+                                <p><%- foodData[i+1].title %></p>
+                                <input name="foods" type="checkbox" id="food<%- i+2 %>" class="chk" value="food<%- i+2 %>">
+                                <label for="food<%- i+2 %>"><span>✔</span></label>
+                            </div>
+                        </div>
+                    <% } %>
+                    <div class="last_box" style="line-height: 50px; text-align: center; justify-content: center;">
+                        <div class="countMessage">
+                            <img src="">
+                            <h4 style="color:#fff; font-family: 'ONE-Mobile-Regular'; font-size: 25px;"></h4>
+                        </div>
+                    </div>
+                    <button id="next" type="button">다음</button>
+                </form>
+            </div>
+        </div>
+        <script src="js/testform.js"></script>
+    </div>
+</body>
+
+</html>
